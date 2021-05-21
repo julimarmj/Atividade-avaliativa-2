@@ -12,7 +12,8 @@ void  min_max(int inum, int *pnums[], int *pmin, int *pmax){
     if (*pnums[i] < *pmin){
       *pmin = *pnums[i];
     }
-  }
+}
+
   
 }
 
@@ -24,7 +25,7 @@ int main() {
   int nums[inum], *pnums[inum];
 
   for (int i=0; i < inum; i++){
-    cout << "digite o "<<i+1 << "º numero: \n";
+    cout << "Digite o "<<i+1 << "º numero: \n";
     cin >> nums[i];
     pnums[i] = &nums[i];
   }
