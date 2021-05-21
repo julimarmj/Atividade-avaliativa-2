@@ -17,18 +17,24 @@ void  min_max(int inum, int *pnums[], int *pmin, int *pmax){
 }
 
 int main() {
-  int inum=0, min=0, max=0;
+  int inum=0, min, max;
 
   cout << "Informe a quantidade de numeros de entrada: \n ";
   cin >> inum;
   int nums[inum], *pnums[inum];
 
-  for (int i=0; i<inum; i++){
+  for (int i=0; i < inum; i++){
     cout << "digite o "<<i+1 << "º numero: \n";
     cin >> nums[i];
     pnums[i] = &nums[i];
   }
+  
 min_max(inum, pnums, &min, &max);
-cout << min<<endl;
-cout << max<< endl;
+
+cout << "Os numeros digitados foram:";
+for (int i=0; i < inum; i++){
+  cout << "  " << nums[i] ;
+}
+cout << "\nO menor numero é: " << min << endl;
+cout << "O maior numero é: " << max << endl;
 }
