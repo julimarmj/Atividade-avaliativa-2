@@ -5,11 +5,12 @@ int main() {
 
   cout << "Informe a quantidade de numeros de entrada: \n ";
   cin >> inum;
-  int nums[inum];
-  
+  int nums[inum], *ptnum[inum];
+
   for (int i=0; i<inum; i++){
     cout << "digite o "<<i+1 << "º numero: \n";
     cin >> nums[i];
+    ptnum[i] = &nums[i];
   }
 
 }
